@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Store 7-11</title>
+    <!-- Include Longdo Map API script -->
+    <script src="https://api.longdo.com/map/?key=41ba3c4efb8662b11360407728f08213"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!-- Add 22/05/2024 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">  
+
+</head>
+<body>
+
+    <!-- Input field for location -->
+    <!-- <input type="text" id="locationInput" placeholder="Enter a location"> -->
+    <!-- Button to trigger geocoding -->
+    <!-- <button onclick="searchPlace()">Search Place</button> -->
+
+    <div id="map" style="width: 100%; height: 400px;"></div>
+
+    <!-- Include JavaScript file -->
+    <script src="app.js"></script>
+    <!-- Include JavaScript file -->
+
+    <div class="gif-background">
+        <!-- <h3 class="zone-container">Update New Store</h1> -->
+        <div class="bg-text">
+            <h1>Update New Store</h1>
+            <br>
+            <!-- <form action="/" method="post"> -->
+            <form id="locationForm" class="form1" action="/api/locations" method="post">
+                <input class="formInput" type="text"    name="store_id"     placeholder="🏷️ Please input ID..."><br><br>
+                <input class="formInput" type="text"    name="store_name"   placeholder="📝 Please input Name..."><br><br>
+                <input class="formInput" type="text"    name="lat"          placeholder="🗺️ Please input Latitude..."><br><br>
+                <input class="formInput" type="text"    name="lon"          placeholder="📌 Please input Longitude..."><br><br>
+                <input class="formInput" type="text"    name="tel"          placeholder="📞 Please input Tel..."><br><br>
+                <input class="formInput" type="text"    name="address"      placeholder="🏪 Please input Address ..."><br><br>   
+                <button class = "button" type = "submit" name = "insert" >Insert </button>
+
+            </form>
+
+        </div>
+
+    </div>
+ 
+</body>
+</html>
